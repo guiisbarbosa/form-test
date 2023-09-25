@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    color: rgba(255, 255, 255, 1);
+}
+
+a {
+    text-decoration: none;
+    font-weight: 500;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+body {
+    background: url("bg.png") center no-repeat;
+    background-size: cover;
+}
+
+main {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 400px;
+    height: 500px;
+    background: transparent;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column; 
+    gap: 15px;
+    backdrop-filter: blur(10px);
+    border-radius: 13px;
+    border: 2px solid rgba(255, 255, 255, .1);
+    box-shadow: inset 3px 3px 10px rgba(0, 0, 0, .6);
+}
+
+.container h1{
+    color: rgba(255, 255, 255, .5);
+}
+
+.inputbox {
+    width: 300px;
+    height: 40px;
+    position: relative;
+}
+
+.inputbox input {
+    padding: 10px;
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: transparent;
+    border-bottom: 2px solid rgba(255, 255, 255, .5);
+    outline: none;
+    color: #000;
+    transition: .3s;
+}
+
+.inputbox label {
+    position: absolute;
+    left: 0;
+    padding: 10px;
+    text-transform: uppercase;
+    font-size: 20px;
+    transition: .3s;
+    font-weight: 300;
+    color: rgba(20, 20, 20, .5);
+    user-select: none;
+}
+
+.inputbox input:focus ~ label,
+.inputbox input:valid ~ label {
+    padding: 0 10px;
+    transform: translate(10px, -50%);
+    font-size: 12px;
+    color: #000;
+    text-decoration: underline;
+    font-weight: 500;
+}
+
+.remember>label {
+    user-select: none;
+}
+
+.login {
+    border: none;
+    width: 200px;
+    height: 40px;
+    border-radius: 25px;
+    color: rgba(255, 255, 255, .5);
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 16px;
+    background: linear-gradient(#053a5f, #02132B);
+
+}
+
+.login:hover {
+    color: rgba(50, 50, 50, .8);
+    background: linear-gradient(#FCD487, #F9726B);
+}
+
+#rememb {
+    appearance: none;
+    width: 15px;
+    height: 15px;
+}
+
+#rememb::after {
+    content: url('./lock-open-solid.svg');
+}
+
+#rememb::before {
+    content: url('./lock-solid.svg');
+}
+
+#rememb:checked::before{
+    display: none;
+}
+
+#rememb:not(:checked)::after {
+    display: none;
+}
