@@ -125,10 +125,10 @@ main {
     content: url('./lock-solid.svg');
 }
 
-#rememb:checked::before{
+#rememb:checked::after{
     display: none;
 }
 
-#rememb:not(:checked)::after {
+#rememb:not(:checked)::before {
     display: none;
 }
